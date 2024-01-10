@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="fCC Technical Documentation Project" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>C++ Documentation</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <header>C++ Documentation</header>
+        <ul id="description__points">
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+          <li><a class="nav-link" href="#C++_and_C">C++ and C</a></li>
+          <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+          <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+          <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+          <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+          <li><a class="nav-link" href="#Constants">Constants</a></li>
+          <li><a class="nav-link" href="#Data_types">Data types</a></li>
+          <li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+          <li><a class="nav-link" href="#while_statement">while statement</a></li>
+          <li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header id="main-section__title">Introduction</header>
+          <article id="description">
+            <p id="description__paragraph">C++ is a high-level, general-purpose programming language created as an extension of the C programming language. It combines both high-level and low-level language features, making it suitable for various applications, including systems/software development and game development.</p>
+            <ul id="description__points">
+              <li>Supports object-oriented programming paradigms with classes, inheritance, polymorphism, and encapsulation.</li>
+              <li>Offers low-level memory manipulation and high-level abstractions, allowing for efficient resource management.</li>
+              <li>Provides a comprehensive set of libraries for various functionalities like input/output operations, containers, algorithms, etc.</li>
+              <li>C++ is backward-compatible with C and supports procedural and object-oriented programming styles.</li>
+              <li>Offers control over hardware, making it suitable for systems programming.</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="What_you_should_already_know">
+          <header id="main-section__title">What you should already know</header>
+          <article id="description">
+            <p id="description__paragraph">This guide assumes you have a basic understanding of programming concepts and computer science fundamentals, including:</p>
+            <ul id="description__points">
+              <li>Knowledge of basic programming constructs like variables, control structures, and functions.</li>
+              <li>Familiarity with the command-line interface and working in a terminal or console environment.</li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="C++_and_C">
+          <header id="main-section__title">C++ and C</header>
+          <article id="description">
+            <p id="description__paragraph">C++ and C share fundamental similarities but also have crucial differences. While C++ extends C and inherits many of its features, it introduces object-oriented programming concepts and supports both procedural and object-oriented programming styles.</p>
+            <p id="description__paragraph">C++ enriches the C language by providing stronger type checking, a richer standard library, exception handling, namespaces, and templates. It maintains compatibility with C, allowing C code to run within a C++ environment. However, it extends C significantly, making it more suitable for modern software development needs with its support for high-level abstraction and efficient resource management.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Hello_world">
+          <header id="main-section__title">Hello world</header>
+          <article id="description">
+            <p id="description__paragraph">To get started with writing C++, open your preferred editor and write your first "Hello world" C++ code:</p>
+            <pre id="code-block">      
+    <code>#include &lt;iostream&gt;
+
+    int main() {
+        std::cout << "Hello, World!" << std::endl;
+        return 0;
+    }</code>
+            </pre>
+          </article>
+        </section>
+        <section class="main-section" id="Variables">
+          <header id="main-section__title">Variables</header>
+          <article id="description">
+            <p id="description__paragraph">You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p id="description__paragraph">A C++ identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9).
+      Because C++ is case sensitive, letters include the characters "A" through "Z" (uppercase) and "a" through "z" (lowercase).</p>
+            <p id="description__paragraph">You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. Unicode escape sequences can also be used as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Declaring_variables">
+          <header id="main-section__title">Declaring variables</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, variables can be declared in various ways:</p>
+            <p id="description__paragraph">C++11 introduced the 'auto' keyword to declare variables with automatic type deduction. For example,</p>
+            <pre id="code-block">      
+    <code>auto x = 42;</code>
+            </pre>
+            <p id="description__paragraph">This allows the compiler to automatically deduce the variable's type based on the assigned value.</p>
+            <p id="description__paragraph">Variables can be explicitly declared with a specified type. For instance,</p>
+            <pre id="code-block">      
+    <code>int x = 42;</code>
+            </pre>
+            <p id="description__paragraph">This declares an integer variable 'x' and initializes it with the value 42.</p>
+            <p id="description__paragraph">Variables can also be declared without immediate initialization, like so:</p>
+            <pre id="code-block">      
+    <code>int y;</code>
+            </pre>
+            <p id="description__paragraph">In this case, the variable 'y' is declared but not initialized. It may contain garbage or undefined values until explicitly assigned.</p>
+            <p id="description__paragraph">These methods enable the declaration of variables in C++, offering flexibility in specifying types and initializing values. The 'auto' keyword allows for automatic type inference, while explicit type declarations provide clarity in the variable's data type.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Variable_scope">
+          <header id="main-section__title">Variable scope</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, variables have different scopes depending on where they are declared:</p>
+            <p id="description__paragraph">Variables declared outside any function or block have global scope. They are accessible from any part of the program.</p>
+            <pre id="code-block">      
+    <code>int globalVariable = 10; // Global variable</code>
+            </pre>
+            <p id="description__paragraph">Variables declared inside a function are local to that function and can only be accessed within it.</p>
+            <pre id="code-block">      
+    <code>void someFunction() {
+        int localVariable = 20; // Local variable within someFunction()
+    }</code>
+            </pre>
+            <p id="description__paragraph">C++ supports block-level scoping where variables declared within a block (within curly braces) have scope limited to that block.</p>
+            <pre id="code-block">      
+    <code>if (true) {
+        int blockVariable = 30; // Variable with block scope
+    }</code>
+            </pre>
+            <p id="description__paragraph">In C++, variables declared within a block are scoped to that block and its nested blocks. Once the block is exited, the variables cease to exist. This helps in managing variable lifetimes and prevents naming conflicts by limiting a variable's scope to a specific block of code.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Global_variables">
+          <header id="main-section__title">Global variables</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, global variables are declared outside of any function and have a global scope, making them accessible from any part of the program.</p>
+            <pre id="code-block">      
+    <code>#include <iostream>
+    using namespace std;
+
+    int globalVariable = 10; // Global variable
+
+    int main() {
+        cout << "Global variable value: " << globalVariable << endl;
+        return 0;
+    }</code>
+            </pre>
+            <p id="description__paragraph">Global variables in C++ persist throughout the program's execution, and their values can be accessed and modified from any function or block within the program. They are typically declared outside of any function and can be accessed using their name directly.</p>
+            <p id="description__paragraph">However, it's generally recommended to use global variables sparingly due to potential issues with program maintainability and unintended side effects caused by their unrestricted access across different parts of the program.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Constants">
+          <header id="main-section__title">Constants</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, you can define constants using the const keyword. Constants are immutable values whose values cannot be changed once initialized.</p>
+            <pre id="code-block">      
+    <code>#include <iostream>
+    using namespace std;
+
+    const double PI = 3.14; // Constant declaration
+
+    int main() {
+        cout << "Value of PI: " << PI << endl;
+        return 0;
+    }</code>
+            </pre>
+            <p id="description__paragraph">In C++, constants must be initialized upon declaration and cannot be reassigned a different value throughout the program's execution.</p>
+            <p id="description__paragraph">The scope of constants in C++ follows the same rules as other variables. They are accessible within the scope they are declared in and cannot have the same name as a variable or function within the same scope. Attempting to reassign a value to a constant will result in a compilation error.</p>
+            <p id="description__paragraph">Constants provide a way to define values that remain constant throughout the program, enhancing readability and ensuring that certain values do not change accidentally during program execution.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Data_types">
+          <header id="main-section__title">Data types</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, the data types are the building blocks used to define variables or functions. It includes fundamental data types, such as integral types, floating-point types, and compound types. Here's a brief overview:</p>
+            <ul id="description__points">
+              <li>
+                Fundamental Types: 
+                <ul id="description__points">
+                  <li>Integer types: Represent whole numbers. (e.g., int, short, long)</li> 
+                  <li>Floating-point types: Represent real numbers. (e.g., float, double)</li>
+                  <li>Character types: Represent individual characters. (e.g., char)</li>
+                  <li>Boolean type: Represents true or false values. (bool)</li>
+                </ul>
+              </li>
+              <li>
+                Derived Types:
+                <ul id="description__points">
+                  <li>Pointers: Hold memory addresses. (e.g., int*, char*)</li>
+                  <li>References: Provide aliases to existing variables. (e.g., int&, char&)</li>
+                </ul>
+              </li>
+              <li>
+                Compound Types:
+                <ul id="description__points">
+                  <li>Arrays: Contain elements of the same type in a contiguous block of memory.</li>
+                  <li>Structures: Group different data types under one name.</li>
+                  <li>Classes: Similar to structures but also encapsulate methods and access specifiers.</li>
+                  <li>Unions: Hold different data types in the same memory location.</li>
+                </ul>
+              </li>
+            </ul>
+            <p id="description__paragraph">C++ also supports modifiers, such as signed, unsigned, and const, to further refine the fundamental types. These data types allow you to define variables, functions, and classes, providing the foundation for creating robust applications.</p>
+          </article>
+        </section>
+        <section class="main-section" id="if...else_statement">
+          <header id="main-section__title">if...else statement</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, the if statement is used to execute a block of code if a specified condition is true. It can be followed by an optional else statement to execute a block of code if the condition is false. Here is an explanation of the if...else statement in C++:</p>
+            <pre id="code-block">      
+    <code>if (condition) {
+        // statement_1 runs if condition is true
+    } else {
+        // statement_2 runs if condition is false
+    }</code>
+            </pre>
+            <p id="description__paragraph">condition can be any expression that results in a Boolean value (true or false).</p>
+            <p id="description__paragraph">The if statement checks the given condition. If the condition evaluates to true, statement_1 inside the block will be executed; otherwise, statement_2 will be executed.</p>
+            <p id="description__paragraph">You can use multiple else if statements to check for multiple conditions in sequence:</p>
+            <pre id="code-block">      
+    <code>if (condition_1) {
+        // statement_1
+    } else if (condition_2) {
+        // statement_2
+    } else if (condition_n) {
+        // statement_n
+    } else {
+        // statement_last
+    }</code>
+            </pre>
+            <p id="description__paragraph">If multiple conditions are present, only the block associated with the first condition that is true will be executed.</p>
+            <p id="description__paragraph">It's recommended to use curly braces {} even for single statements to avoid confusion and maintain code clarity.</p>
+            <p id="description__paragraph">Avoid using simple assignments within conditional expressions, as it can be mistaken for equality checking. For instance, use == for comparison instead of = inside the if condition.</p>
+            <p id="description__paragraph">If an assignment needs to be used within a conditional expression, enclose it in additional parentheses for clarity.</p>
+            <p id="description__paragraph">The if...else statement in C++ helps control program flow based on specified conditions and is a fundamental part of decision-making in programming logic.</p>
+          </article>
+        </section>
+        <section class="main-section" id="while_statement">
+          <header id="main-sectin__title">while statement</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, the while loop executes a block of code repeatedly as long as a specified condition is true. Here's an explanation of the while statement in C++:</p>
+            <pre id="code-block">      
+    <code>while (condition) {
+        // statements
+    }</code>
+            </pre>
+            <p id="description__paragraph">condition is a Boolean expression that is evaluated before each iteration of the loop.</p>
+            <p id="description__paragraph">The loop continues executing as long as the condition evaluates to true.</p>
+            <p id="description__paragraph">If the condition becomes false, the loop terminates, and control passes to the next statement following the while loop.</p>
+            <p id="description__paragraph">The block of code within the while loop (the statements) is executed repeatedly while the condition remains true.</p>
+            <p id="description__paragraph">The condition is checked before the execution of the statements inside the loop. If the condition initially evaluates to false, the loop body will not execute.</p>
+            <p id="description__paragraph">To avoid an infinite loop, ensure that the condition eventually becomes false during the loop execution.</p>
+            <pre id="code-block">      
+    <code>int n = 0;
+    int x = 0;
+
+    while (n < 3) {
+        n++;
+        x += n;
+    }</code>
+            </pre>
+            <p id="description__paragraph">With each iteration, n is incremented by 1 and added to x. Therefore, x and n take on the following values:</p>
+            <ul id="description__points">
+              <li>After the first iteration: n = 1 and x = 1</li>
+              <li>After the second iteration: n = 2 and x = 3</li>
+              <li>After the third iteration: n = 3 and x = 6</li>
+            </ul>
+            <p id="description__paragraph">After the third iteration, the condition n < 3 becomes false, and the loop terminates.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Function_declarations">
+          <header id="main-section__title">Function declarations</header>
+          <article id="description">
+            <p id="description__paragraph">In C++, function declarations or function definitions consist of:</p>
+            <pre id="code-block">      
+    <code>return_type function_name(parameter_list) {
+        // Function body/statements
+    }</code>
+            </pre>
+            <p id="description__paragraph">return_type specifies the data type of the value returned by the function.</p>
+            <p id="description__paragraph">function_name is the identifier or name of the function.</p>
+            <p id="description__paragraph">parameter_list is a list of parameters (arguments) the function expects, enclosed in parentheses and separated by commas.</p>
+            <p id="description__paragraph">The function body consists of the statements enclosed in curly braces { }.</p>
+            <p id="description__paragraph">For example, the following code defines a simple function named square in C++:</p>
+            <pre id="code-block">      
+    <code>int square(int number) {
+        return number * number;
+    }</code>
+            </pre>
+            <p id="description__paragraph">The function square takes an integer argument number.</p>
+            <p id="description__paragraph">The function body contains a single statement that multiplies the number argument by itself using the * operator and returns the result using the return statement.</p>
+            <p id="description__paragraph">In C++, parameters are passed by value by default. This means that changes made to the parameter within the function are limited to the function's scope and do not affect the original value passed to the function from outside.</p>
+          </article>
+        </section>
+        <section class="main-section" id="Reference">
+          <header id="main-section__title">Reference</header>
+          <article id="description">
+            <p id="description__paragraph">The information provided here is based on various C++ programming resources including the C++ standard documents, official documentation, textbooks, and online tutorials.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
